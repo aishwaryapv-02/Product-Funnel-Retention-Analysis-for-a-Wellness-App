@@ -9,15 +9,15 @@
 - Primary goal is to improve 30-day retention
 
 ## Key User Events
-- signup_completed
-- onboarding_completed
-- session_started
-- session_completed
-- subscription_started
+- signup_completed - When a user registers with an email and password
+- onboarding_completed - After signup, a user completes his/her profile to complete onboarding
+- session_started - When a user utilizes a service within the app, records the session start time
+- session_completed - Records the user's session end time.
+- session_ID - Unique identifier for each of the sessions
+- subscription_started - Time when the user subscribes after making a payment to a service
 
 ## Activation Definition
-- What counts as “activated”
-- Time window
+- When a user completes at least one session within 3 days of signup
 
 ## Funnel Definitions
 - Step 1 → Step 2
