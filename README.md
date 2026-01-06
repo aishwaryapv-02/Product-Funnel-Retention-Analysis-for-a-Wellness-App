@@ -1,1 +1,1 @@
-# FinancialForecasting-WarehouseMetrics
+# Product Funnel & Retention Analysis for a Freemium Wellness App
