@@ -21,60 +21,62 @@
 
 ## Funnel Definitions
 
-The primary user funnel tracks how new users progress from signup to experiencing core product value and, optionally, converting to a paid subscription.
+The funnel tracks a new user's journey from signing up to "The Mind Power" app and meaningfully consuming meditation audios.
 
 ### Primary Activation Funnel
 This funnel focuses on early user engagement and activation.
 
-1. Signup Completed  
-   - Event: `signup_completed`
-   - Definition: User successfully creates an account.
+1. User Awareness
+   - User becomes aware of the application "The Mind Power" through marketing strategies utilized in social media presence, flyers, ads etc.
+  
+2. App Install
+   - User proceeds to install the app after being aware of it 
 
-2. Onboarding Completed  
-   - Event: `onboarding_completed`
-   - Definition: User finishes the initial onboarding flow.
+3. Signup Completed
+   - User proceeds to sign up with an email and password and login to their account to explore the app
 
-3. First Session Started  
-   - Event: `session_started`
-   - Definition: User starts their first wellness session.
+4. Onboarding Completed  
+   - The user completed their profile providing their details such as age, gender, what drew their interest in the app, what they wish to accomplish etc.
 
-4. Session Completed  
-   - Event: `session_completed`
-   - Definition: User completes at least one full session.
-   - This step is considered the point of activation.
+5. First Session Started  
+   - After completing their profile, the user proceeds to choose a meditation sound based on their interest and proceeds to star a session.
 
-### Paid Conversion Funnel (Secondary)
-This funnel tracks conversion to a paid subscription among engaged users.
+6. Session Completed  
+   - When a user completes one session after starting it.
+  
+7. Repeat engagement
+   - Identifying when the user forms a habit and returns back to the app to use the features
+  
+8. Subscription
+   - Based on the user's repeated usage user is prompted to unlock additional features if they subscribed
 
-1. Activated User  
-   - Definition: User has completed at least one session.
-
-2. Subscription Started  
-   - Event: `subscription_started`
-   - Definition: User begins a paid subscription.
+This funnel provides insights on user behavior on identifying when a user disengages with the app from sign-up, activation to subscribing to the app.
 
 
 ## Retention Definition
 
-Retention is measured using cohort-based analysis, where users are grouped by their signup date.
-
-A user is considered retained on Day N if they complete at least one wellness session on Day N after signup.
+Retension gives us an idea of weather a user has completed at least one meditation session within a time range such as Day 1, Day 7-13, Day 30-36.
 
 ### Retention Windows
 - Day 1 (D1): User completes a session 1 day after signup
-- Day 7 (D7): User completes a session 7 days after signup
-- Day 30 (D30): User completes a session 30 days after signup
+- Day 7 (D7): User completes a session between days 7-13 after signup
+- Day 30 (D30): User completes a session between 30-36 after signup
 
 ### Notes
-- Retention is measured at the user level.
-- Multiple sessions on the same day count as a single retained user.
-- Passive activity (e.g., app opens without session activity) is not considered retention.
+- Retention can be estimated based on the user's sign up date by grouping them into categories using cohort analysis.
 
 
 ## Assumptions & Limitations
 
-- The dataset used in this project is simulated to reflect realistic user behavior patterns in a freemium wellness app.
-- User behavior probabilities (e.g., onboarding completion, session completion, retention) are based on reasonable assumptions rather than real production data.
-- The analysis assumes a single primary user journey and does not account for multiple personas or advanced segmentation.
-- Timezones are normalized, and all events are treated as occurring in a single timezone.
-- The project focuses on behavioral analytics (funnels and retention) and does not include financial metrics such as revenue, LTV, or churn modeling.
+### Assumptions
+
+- The data in this project is generated to reflect user behavior patterns in the 'The Mind Power' app.
+- Timezones are normalized to UTC.
+- Each session has a unique session_id.
+- Each user has a unique user_id.
+- Project is focused on observing user behavioral analytics.
+
+### Limitations
+
+- This is a simulated data using python and not a real-word/public data.
+- The main focus of the project is on short-term retention.
