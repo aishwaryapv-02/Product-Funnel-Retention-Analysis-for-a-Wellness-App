@@ -1,0 +1,12 @@
+# Ignore system files
+.DS_Store
+
+# Ignore virtual environment
+.venv/
+
+# Ignore Jupyter checkpoints
+.ipynb_checkpoints/
+
+# Ignore all csv except sample
+data/*.csv
+!data/*sample.csv
